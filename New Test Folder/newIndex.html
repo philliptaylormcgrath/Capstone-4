@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/solar/bootstrap.min.css" rel="stylesheet" integrity="sha384-8nq3OiMMgrVFAHyRMMO+DTfMEciSY+c3Awhj/5ljQ1xck1Uv2BUtMjsjLD8GT5Er" crossorigin="anonymous">
+<script src="cart.js" async></script> <!-- async will allow the remainder of the page to load while this loads in the background, as opposed to the default of pausing everything until this loads-->
+  </head>
+  <body>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> //Navbar begins here. Commented out. It was pointless.
+<a class="navbar-brand" href="#">Navbar</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Features</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+</nav> -->
+    <h1>SPACE</h1>
+    <h6>Wow</h6>
+    <h3>Our Solar System: All heavenly bodies come as-is. Moons are always included free of charge! Buyer must pick up purchases.</h3>
+    <h4><button onclick="printArrays();">Checkout</button></h4>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Add to Cart</th>
+          <th scope="col">Price (in millions)</th>
+          <th scope="col">Planet</th>
+          <th scope="col">Largest moon</th>
+          <th scope="col">Price and info</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-secondary">
+          <th scope="row"><button onclick="addToCartMercury();">Add to cart</button></th>
+          <td>$13,500</td>
+          <td>Mercury</td>
+          <td>No moons</td>
+          <td>Completely Iron. Probably a core of a former planet between Mars and Jupiter. Tidally locked with the Sun (one side always day and one always night). Water-ice included (seriously.)</td>
+        </tr>
+
+        <tr class="table-primary">
+          <th scope="row"><button onclick="addToCartVenus();">Add to cart</button></th>
+          <td>$24,000</td>
+          <td>Venus</td>
+          <td>No moons</td>
+          <td>Hottest planet at the club. Take that, Mercury. Sulfuric rain could be useful?. Possible decent living conditions in the upper atmosphere. (Probably not) </td>
+        </tr>
+
+        <tr class="table-info">
+          <th scope="row"><button onclick="addToCartEarth();">Add to cart</button></th>
+          <td>$10,000,000</td>
+          <td>Earth</td>
+          <td>Luna</td>
+          <td>Big moon for smol planet. Comes pre-terraformed! Lightly used. Moderate pest problem. </td>
+        </tr>
+
+        <tr class="table-warning">
+          <th scope="row"><button onclick="addToCartMars();">Add to cart</button></th>
+          <td>$36,000</td>
+          <td>Mars</td>
+          <td>Phobos</td>
+          <td>Both Martian moons will either crash into the planet or escape into space. Consider purchasing some bungie cables <a href= "https://www.amazon.com/s?k=bungie+cables&ref=nb_sb_noss_2">here.</a></td>
+        </tr>
+
+        <tr class="table-warning">
+          <th scope="row"><button onclick="addToCartJupiter();">Add to cart</button></th>
+          <td>$60,000</td>
+          <td>Jupiter</td>
+          <td>Ganymede</td>
+          <td>Contains more mass than all other planets in the system combined. Big boi. No surface. Jovian moons add enormous value to this purchase! </td>
+        </tr>
+
+        <tr class ="table-primary">
+          <th scope="row"><button onclick="addToCartSaturn();">Add to cart</button></th>
+          <td>$44,000</td>
+          <td>Saturn</td>
+          <td>Titan</td>
+          <td>Temporarily surrounded by Ice Rings. Would make a great tourist destination! Lightest planet by mass/volume. Would float in a bathtub. Strong system of moons.</td>
+        </tr>
+
+        <tr class="table-info\">
+          <th scope="row"><button onclick="addToCartUranus();">Add to cart</button></th>
+          <td>$18,000</td>
+          <td>Uranus</td>
+          <td>Titania</td>
+          <td>Scientists are considering renaming to 'Urectum' to avoid lowbrow humor. Coldest planet, with temperatures reaching negative 350 degrees (f). Would be a suitable place to freeze (or hide) a human body.</td>
+        </tr>
+
+        <tr class="table-info">
+          <th scope="row"><button onclick="addToCartNeptune();">Add to cart</button></th>
+          <td>$14,000</td>
+          <td>Neptune</td>
+          <td>Triton</td>
+          <td>Outermost known planet. At 2.7 bllion miles away, it is an excellent place to 'get away from it all.' 1300 MPH winds would be ideal for an ambitious wind-farm startup! </td>
+        </tr>
+
+        <tr class="table-light">
+          <th scope="row"><button onclick="addToCartPluto();">Add to cart</button></th>
+          <td>$500</td>
+          <td>Pluto</td>
+          <td>Charon</td>
+          <td>A real bargain! Pluto is a dwarf planet with a binary orbit around its moon, Charon (unique to this solar system!) <span style= "font-size: .5em;">For legal purposes, we must disclose that this property is not technically a planet.</span></td>
+        </tr>
+
+        <tr class="table-dark">
+          <th scope="row"><button onclick="addToCartPlanetX();">Add to cart</button></th>
+          <td>$0.00</td>
+          <td>Planet X</td>
+          <td>Unknown</td>
+          <td>Mathematically proven to exist, but never seen. Listen, if you can find it, you can have it.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </body>
+</html>
